@@ -32,6 +32,7 @@ function loadContactsPage() {
     messageInput.maxLength = 3000;
     submitButton.id = "submit";
     submitButton.textContent = "Submit";
+    submitButton.type = "button";
 
 
 
