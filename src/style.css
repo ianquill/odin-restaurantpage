@@ -17,6 +17,7 @@ header {
     white-space: nowrap;
     font-weight: bold;
     font-size: 36px;
+    user-select: none;
 }
 
 ul {
@@ -29,8 +30,12 @@ ul {
 }
 
 .header-item {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     cursor: pointer;
+}
+
+.header-item:hover {
+    color: #611c35;
 }
 
 .main-container {
@@ -52,3 +57,80 @@ img {
     border-radius: 20px;
 }
 
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-content: space-evenly;
+}
+
+.menu-card {
+    border-radius: 10px;
+    width: 400px;
+}
+
+.menu-image {
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+}
+
+input:focus {
+    outline: 2px #611c35 solid;
+}
+
+label {
+    font-weight: bold; 
+}
+
+#name {
+    width: 200px;
+}
+
+#email {
+    width: 200px;
+}
+
+#message {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px; 
+    width: 100%;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+}
+
+#message:focus {
+    outline: 2px #611c35 solid;
+}
+
+#submit {
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    background: #4da1a9;
+    color: white;
+    padding: 10px;
+    flex: 0 0 0;
+    align-self: flex-end;
+    margin: 0;
+}

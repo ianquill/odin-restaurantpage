@@ -17,15 +17,17 @@ function loadMenuPage() {
         const card = document.createElement('div');
         const title = document.createElement('h3');
         const description = document.createElement('p');
+        const image = element.img;
         
         card.classList.add('menu-card');
         title.classList.add('menu-title');
         description.classList.add('menu-description');
+        image.classList.add('menu-image');
         
         title.textContent = element.title;
         description.textContent = element.description;
         
-        card.append(title, description);
+        card.append(title, description, image);
         gridContainer.appendChild(card);
     });
     

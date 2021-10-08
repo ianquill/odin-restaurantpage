@@ -17,10 +17,3 @@ function loadHomePage() {
 }
 
 export {loadHomePage};
-
-// <!-- <div class="main-container">
-//             <div class="home-content">
-//                 <h2>Congratulations. You've found Los Angeles's best hidden secret.</h2>
-//                 <p>We here at Clown Burger take pride in our 100% clown-based patties.</p>
-//             </div>
-//         </div> -->
