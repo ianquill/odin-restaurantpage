@@ -28,16 +28,21 @@ for (let li of nav) {
 
 function loadPage(page) {
 
+    // function to clear page
+    while (mainContainer.firstChild) {
+        mainContainer.removeChild(mainContainer.firstChild);
+    }
+
     switch (page) {
         case "Home":
-            loadHomePage();
+            mainContainer.appendChild(loadHomePage());
             break;
         case "Menu":
-            loadMenuPage();
+            mainContainer.appendChild(loadMenuPage());
             break;
 
         case "Contacts":
-            loadContactsPage();
+            mainContainer.appendChild(loadContactsPage());
             break;
     
         default:
