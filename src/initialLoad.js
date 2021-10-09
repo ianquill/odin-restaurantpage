@@ -1,6 +1,4 @@
 function initialLoad() {
-    const content = document.getElementById('content');
-
     // Header
     const header = document.createElement('header');
     const headerText = document.createElement('h1');
@@ -28,4 +26,21 @@ function initialLoad() {
     return header;
 }
 
-export {initialLoad};
+function loadFooter() {
+    const footer = document.createElement('footer');
+    const footerText = document.createElement('p');
+    const footerLink = document.createElement('a');
+
+    footerText.classList.add('footer-text');
+    footerText.textContent = "© Ian Quill | Created as part of the Odin Project Curriculum | 2021";
+    footerLink.classList.add('footer-text');
+    footerLink.classList.add('link');
+    footerLink.textContent = `@ianquill`;
+    footerLink.href = `https://github.com/ianquill`;
+
+    footer.append(footerText, footerLink);
+
+    return footer;
+}
+
+export { initialLoad, loadFooter };

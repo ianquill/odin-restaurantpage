@@ -1,5 +1,5 @@
 import './style.css';
-import { initialLoad } from './initialLoad.js';
+import { initialLoad, loadFooter } from './initialLoad.js';
 import { loadHomePage } from './homePage.js';
 import { loadMenuPage } from './menuPage.js';
 import { loadContactsPage } from './contactsPage.js';
@@ -16,6 +16,7 @@ mainContainer.appendChild(loadHomePage());
 
 content.appendChild(initialLoad());
 content.appendChild(mainContainer);
+content.appendChild(loadFooter());
 
 const nav = document.querySelectorAll('.header-item');
 
@@ -23,12 +24,12 @@ for (let li of nav) {
     li.addEventListener('click', () => {
         const page = li.textContent;
         loadPage(page);
-    })
+    });
 };
 
 function loadPage(page) {
 
-    // function to clear page
+    // clear page
     while (mainContainer.firstChild) {
         mainContainer.removeChild(mainContainer.firstChild);
     }
