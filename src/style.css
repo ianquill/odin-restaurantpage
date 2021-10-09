@@ -6,6 +6,20 @@
     font-style: normal;
 }
 
+@keyframes headerJiggle {
+    0% {transform: rotate(0turn);}
+    25% {transform: rotate(0.2turn);}
+    50% {transform: rotate(-0.1turn);}
+    75% {transform: rotate(0.2turn);}
+    100% {transform: rotate(-0.1turn);}
+
+}
+
+@keyframes fall {
+    0% {transform: translate(0);}
+    100% {transform: translateY(5vh);}
+}
+
 body {
     font-family: Helvetica, sans-serif;
     background: #FFA630;
@@ -30,6 +44,13 @@ header {
     margin-left: 20px;
 }
 
+.header-text:hover {
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+
 ul {
     display: flex;
     list-style-type: none;
@@ -48,6 +69,9 @@ ul {
 }
 
 .header-item:hover {
+    animation-name: headerJiggle;
+    animation-duration: 0.5s; 
+    animation-iteration-count: infinite;
     color: #611c35;
 }
 
